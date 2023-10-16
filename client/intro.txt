@@ -1,0 +1,13 @@
+//using vite, as it much faster and better
+ so install vite 
+  npm create vite@latest name
+  choose 'react'
+  choose 'javascript swc'
+  npm install
+  then npm run dev ('cd name' also)
+
+//for tailwind css
+ tailwind css with vite (official st.)
+ follow all steps
+
+//tailwind css intellisense (extension for suggestion)
