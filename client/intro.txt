@@ -11,3 +11,16 @@
  follow all steps
 
 //tailwind css intellisense (extension for suggestion)
+
+//for Backend
+in root dir (Auth)
+git init -y (create package.json)
+then npm i express (create nod mod folder, lock.json)
+make backend folder ("api")
+
+/package.json
+ add "type" : "module"  instead "commonjs" for NOT using require
+ add scripts(for devlop. and build mode) as well.
+
+//before comming , don't forget to move gitignore file to root folder from client 
+  as it will remove unnecssary file to commit on git
