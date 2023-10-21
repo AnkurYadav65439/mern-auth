@@ -3,6 +3,8 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import userRoutes from "./routes/user.route.js"
 import authRoutes from "./routes/auth.route.js"
+import cors from 'cors'
+
 dotenv.config();
 
 mongoose.connect(process.env.MONGO)
@@ -17,6 +19,9 @@ const app =express();
 const port = 3000;
 
 app.use(express.json());
+
+//for cors error while using fetch api and add note
+app.use(cors())
 
 app.listen(port, ()=>{
     console.log(`Server listening at port ${port}`);
