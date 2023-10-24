@@ -57,7 +57,7 @@ export default function SignIn() {
         <p>Dont have an account?</p>
         <Link to="/signup">
           <span className='text-blue-500'>Sign Up</span>
-        </Link>
+        </Link> 
       </div>
       <p className='text-red-700 mt-5'>{error ? error.message || "something went wrong!" : ''}</p>
     </div>
