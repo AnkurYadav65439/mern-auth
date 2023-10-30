@@ -21,11 +21,12 @@ export default function OAuth() {
                 body: JSON.stringify({
                     name: result.user.displayName,
                     email: result.user.email,
-                    photo: result.user.providerId
+                    photo: result.user.photoUrl
                 })
             });
             const data = await res.json();
             dispatch(signInSuccess(data));
+            console.log("data is here : " , data);
         } catch (error) {
             console.log("could not login with google", error);
         }
