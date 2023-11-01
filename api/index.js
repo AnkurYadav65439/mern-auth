@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import userRoutes from "./routes/user.route.js"
 import authRoutes from "./routes/auth.route.js"
 import cors from 'cors'
+import cookieParser from "cookie-parser"
 
 dotenv.config();
 
@@ -22,6 +23,8 @@ app.use(express.json());
 
 //for cors error while using fetch api and add note
 app.use(cors())
+
+app.use(cookieParser());
 
 app.listen(port, ()=>{
     console.log(`Server listening at port ${port}`);
