@@ -5,6 +5,7 @@ import userRoutes from "./routes/user.route.js"
 import authRoutes from "./routes/auth.route.js"
 // import cors from 'cors'
 import cookieParser from "cookie-parser"
+import path from 'path'
 
 dotenv.config();
 
@@ -16,8 +17,18 @@ mongoose.connect(process.env.MONGO)
     console.log(err);
 })
 
+//this will find dynamic directory name (deploy)
+const __dirname = path.resolve();
+
 const app =express();
 const port = 3000;
+
+app.use(express.static(path.join(__dirname, '/client/dist')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
+})
+//sends index.html to the client from 'dist' folder from server
 
 app.use(express.json());
 
